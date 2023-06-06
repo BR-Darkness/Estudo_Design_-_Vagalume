@@ -10,7 +10,6 @@
     --Card-Color:           #1e2021;
     --Footer-Color:         #282830;
     --Modal-Color:          #2d2d2d;
-
 }
 
 .LightTheme
@@ -57,7 +56,7 @@
 
 .LightTheme .ThemeButton
 {
-    background-image: url("/docs/img/misc/dark_mode.svg");
+    background-image: url("../img/misc/dark_mode.svg");
 }
 
 .LightTheme .ModalBox

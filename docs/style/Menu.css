@@ -171,7 +171,7 @@
 
 #MenuMobileButton
 {
-    background-image: url("/docs/img/misc/menu.svg");
+    background-image: url("../img/misc/menu.svg");
     background-repeat: no-repeat;
     background-position: center;
 
@@ -191,7 +191,7 @@
 
 .ThemeButton
 {
-    background-image: url("/docs/img/misc/light_mode.svg");
+    background-image: url("../img/misc/light_mode.svg");
     background-repeat: no-repeat;
     background-color: #282830;
     background-position: center;
@@ -263,7 +263,7 @@
 
     #MenuMobileButton
     {
-        background-image: url("/docs/img/misc/menu.svg");
+        background-image: url("../img/misc/menu.svg");
         background-repeat: no-repeat;
         background-position: center;
         
