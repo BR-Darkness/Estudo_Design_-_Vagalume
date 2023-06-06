@@ -1,0 +1,75 @@
+#SearchBarContainer
+{
+    background-color: #141418;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    display: flex;
+    margin: auto;
+    padding: 2em;
+    z-index: 1;
+
+    /* Tamanhos do Container: */
+    min-height: 400px;
+    max-height: 800px;
+    height: 70vh;
+    width: 100%;
+}
+
+#SearchBarContainer img
+{
+    filter: brightness(.25) blur(.35rem);
+    position: absolute;
+    object-fit: cover;
+    transition: .5s;
+    margin: auto;
+    z-index: -1;
+    right: 0;
+    left: 0;
+    
+    /* Tamanhos da imagem: */
+    min-height: 400px;
+    max-height: 800px;
+    max-width: 2000px;
+    height: 100%;
+    width: 100%;
+}
+
+#SearchBarContainer p
+{
+    /* text-shadow:  2px 2px #141414; */
+    background-color: #cf02;
+    border-radius: 8px;
+    padding: .25em 1em;
+    text-align: center;
+    color: #cf0;
+    margin: 1em;
+}
+
+#SearchBarContainer h1
+{
+    text-shadow: 2px 2px #141414;
+    color: #f1f1f1;
+}
+
+#SearchBarContainer button
+{
+    border-bottom: 2px solid #ccff00;
+    background-color: #141418;
+    border-radius: 4px;
+    text-align: center;
+    color: #B5B5B5;
+    max-width: 600px;
+    padding: 1em;
+    margin: 1em;
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) 
+{
+    #SearchBarContainer img, #SearchBarContainer
+    {
+        height: 400px;
+    }
+}

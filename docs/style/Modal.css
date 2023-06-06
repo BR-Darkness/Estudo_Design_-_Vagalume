@@ -1,0 +1,263 @@
+.CloseModal
+{
+    display: none !important;
+}
+
+.OpenModal
+{
+    display: block;
+}
+
+.NoScroll
+{
+    overflow: hidden;
+}
+
+/* -----  ----- Modal Container  -----  ----- */
+
+.ModalContainer
+{
+    /* Descomente essa linha para testar sem o modal atrapalhar */
+    /* display: none !important; */
+
+    background-color: #141414f0;
+    flex-direction: column;
+    align-items: center;
+    max-width: 2000px;
+    position: fixed;
+    padding: 0.5em;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+
+    overflow-y: auto;
+    color: #f1f1f1;
+}
+
+.ModalContainer button
+{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    height: 36px;
+    width: 36px;
+
+    box-shadow: 0 0 0 2px #cf0;
+    background-color: #141414; 
+    border-radius: 50%;
+    padding: 0.25rem;
+    cursor: pointer;
+    margin: 0.5em;
+    float: right; 
+}
+
+/* -----  ----- Modal Button -----  ----- */
+
+.ModalButton
+{
+    position: sticky;
+    top: 0;
+}
+
+.CloseModalButton
+{
+    background-image: url("/docs/img/misc/cancel.svg");
+}
+
+/* -----  ----- Modal Inputs: -----  ----- */
+
+.ModalContainer input[type="text"], .ModalContainer input[type="password"], .ModalContainer input[type="search"]
+{
+    box-shadow: 0 0 0 2px #141414;
+    border-bottom: 2px solid #cf0;
+    background-color: #141414;
+    border-radius: 2px;
+    margin-top: 0.5em;
+    color: #f1f1f1;
+    padding: 0.75em;
+    width: 100%;
+}
+
+.ModalContainer input::placeholder
+{
+    color: #B5B5B5;
+}
+
+.ModalContainer label
+{
+    letter-spacing: .5px;
+    margin: 1.5rem auto;
+    font-weight: bold;
+}
+
+/* -----  ----- Modal Box: -----  ----- */
+
+.ModalBox
+{
+    background-color: var(--Modal-Color);
+    border: 1px solid #cf0;
+    position: relative;
+    border-radius: 8px;
+    max-width: 600px;
+    color: #f1f1f1;
+    overflow-y: auto;
+    max-height: 75%;
+    margin: auto;
+    padding: 2em;
+    width: 100%;
+}
+
+.ModalBox p
+{
+    text-align: justify;
+    line-height: 2;
+    margin: 2em 0;
+}
+
+/* -----  ----- Modal Box Header: -----  ----- */
+
+.ModalBoxHeader
+{
+    background: linear-gradient(to right,#323832 0, #283848 100%);
+    border: 2px solid #0ac;
+    border-radius: 8px;
+    color: #f1f1f1;
+    font-size: 12px;
+    padding: 2em;
+}
+
+/* -----  ----- Login Modal: -----  ----- */
+
+#LoginModal .ModalBox
+{
+    max-width: 400px;
+}
+
+#LoginModal p
+{
+    text-align: center;
+}
+
+#LoginModal img
+{
+    box-shadow: 0 0 0 2px #2d2d2d;
+    background-color: #2d2d2d;
+    border: 2px solid #0ac;
+    margin: 2em auto 0 auto;
+    border-radius: 50%;
+    padding: 0.5em;
+    display: block;
+}
+
+#LoginModal figcaption
+{
+    text-align: center;
+    margin-top: 1em;
+}
+
+#LoginModal nav
+{
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+#LoginModal input[type="button"]
+{
+    border: 2px solid #2d2d2d;
+    border-radius: 8px;
+    font-weight: 600;
+    min-width: 100px;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0.5em;
+    margin: 1em;
+}
+
+/* -----  ----- Search Modal: -----  ----- */
+
+#SearchModal .ModalBox
+{
+    overflow: visible;
+    margin: 1em auto;
+    width: 100%;
+}
+
+.ModalSearch h3
+{
+    margin-top: 1em;
+}
+
+.SearchCard img
+{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #2d2d2d;
+    background-size: contain;
+
+    box-shadow: 0 0 0 2px #2d2d2d;
+    overflow: hidden;
+    max-height: 64px;
+    max-width: 64px;
+
+    border: 2px solid #0ac;
+    border-radius: 50%;
+    margin: 1em;
+}
+
+/* -----  ----- Modal Search Results: -----  ----- */
+
+.ModalSearch
+{   
+    max-width: 600px;
+    min-width: 200px;
+    width: 100%;
+}
+
+.ModalSearch nav
+{
+    overflow-x: auto;
+}
+
+.ModalSearch ul
+{
+    background-color: #141414;
+    border: 1px solid #580;
+    border-radius: 8px;
+    text-align: center;
+    min-height: 100px;
+    margin: 1em auto;
+    max-width: 600px;
+    min-width: 200px;
+    color: #f1f1f1;
+    overflow-x: auto;
+    font-size: 12px;
+    display: flex;
+    width: 100%;
+}
+
+.ModalSearch li
+{
+    flex-direction: column;
+    height: max-content;
+    display: flex;
+    margin: 1em;
+}
+
+.ModalSearch a
+{
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    padding: 1em;
+}
+
+/* -----  ----- Misc: -----  ----- */
+
+#LoginModal input[type="button"]:hover, .CloseModalButton:hover, .ModalSearch a:hover
+{
+    filter: brightness(0.75);
+    transition: 0.1s;
+}

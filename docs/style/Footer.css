@@ -1,0 +1,125 @@
+footer
+{
+    background-color: var(--Footer-Color);
+    border-radius: 8px 8px 0px 0px;
+    border-top: 2px solid #580;
+    background: var(--Gradient);
+    overflow: hidden;
+    font-size: 14px;
+    padding: 1em;
+    width: 100%;
+}
+
+/* -----  ----- Links do Rodapé: -----  ----- */
+
+#FooterLinks 
+{
+    justify-content: space-around;
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+}
+
+#FooterLinks  li
+{
+    padding: .25em 0em;
+}
+
+.FooterLinksCategory
+{
+    padding: 2em;
+    width: 250px;
+}
+
+/* -----  ----- Redes Sociais: -----  ----- */
+
+#FooterSocial
+{
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    width: 100%;
+}
+
+#FooterSocial ul
+{
+    justify-content: center;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+#FooterSocial li
+{
+    margin: 2em;
+}
+
+#FooterSocial a
+{   
+    background-color: #181818;
+    border-radius: 16px 0 16px;
+    border: 1px solid #580;
+    font-weight: bold;
+    padding: 1em;
+}
+
+/* -----  ----- Final da página: -----  ----- */
+
+#FooterButton
+{
+    justify-content: space-around;
+    border-top: 2px solid #167;
+    background-color: #141414;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+    color: #f1f1f1;
+    font-size: 14px;
+    display: flex;
+    width: 100%;
+}
+
+#FooterButton p
+{
+    width: max-content;
+    margin: 0.5em;
+}
+
+#FooterButton div
+{
+    flex-wrap: wrap-reverse;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+}
+
+/* -----  ----- Misc -----  ----- */
+
+#FooterSocial p, #FooterLinks p
+{
+    margin-bottom: 1em;
+    color: #f1f1f1;
+}
+
+.FooterLinksCategory img, #FooterSocial img
+{
+    vertical-align: sub;
+}
+
+.FooterLinksCategory span
+{
+    color: #fff;
+}
+
+/* -----  ----- Mobile: -----  ----- */
+
+@media screen and (max-width: 500px) 
+{
+    #FooterButton div p, #FooterButton div img
+    {
+        object-fit: contain;
+        width: 100%;
+    }
+}

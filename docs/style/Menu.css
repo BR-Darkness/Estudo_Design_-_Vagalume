@@ -1,0 +1,275 @@
+/* -----  ----- Logo do Site: -----  ----- */
+
+#Logo
+{
+    justify-content: space-between;
+    text-align: center;
+    display: flex;
+    margin: 0 1em;
+}
+
+#Logo img
+{
+    position: relative;
+    display: block;
+    margin: auto;
+}
+
+#Logo a::before
+{
+    transform: translateX(-17px);
+    background-color: #cf0;
+    filter: blur(0.75em);
+    position: absolute;
+    border-radius: 50%;
+    transition: 0.5s;
+    height: 36px;
+    width: 36px;
+    content: "";
+}
+
+#Logo a:hover::before
+{
+    filter: blur(1em);
+    transition: 0.5s;
+}
+
+#Logo a::after
+{
+    content: "Música é tudo";
+    margin-left: 128px;
+    color: #f1f1f1;
+    font-size: 12px;
+}
+
+/* -----  ----- Menu Superior do Site: -----  ----- */
+
+#Menu
+{
+    border-bottom: 2px solid #580;
+    justify-content: space-evenly;
+    background-color: #141418;
+    display: inline-flex;
+    align-items: center;
+    min-height: 70px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    transition: 1s;
+    padding: 20px;
+    width: 100%;
+}
+
+#MenuItens
+{
+    overflow-x: auto;
+}
+
+#MenuItens ul 
+{ 
+    display: flex;
+}
+
+#MenuItens li
+{ 
+    min-width: max-content;
+    margin: 10px 1em;
+    display: flex;
+}
+
+#MenuItens .MenuItensButton
+{
+    border-bottom: 2px solid #cf0;
+    text-shadow:  1px 1px #141414;
+    background-color: #282830;
+    justify-content: center;
+    padding: 0.5em .75em;
+    align-items: center;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #f1f1f1;
+    font-size: .75em;
+    cursor: pointer;
+    display: flex;
+    gap: .5em;
+}
+
+#MenuItens .MenuItensButton:hover
+{
+    border-bottom: 2px solid #0ac;
+    background: var(--Gradient);
+    transition: .25s;
+}
+
+#MenuItens .MenuItensButton img
+{
+    vertical-align: sub;
+}
+
+/* -----  ----- Menu Inferior: -----  ----- */
+
+#MenuBar
+{
+    background: var(--MenuBar-Color);
+    border-bottom: 2px solid #167;
+    text-align: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: .75em 0;
+    width: 100%;
+}
+
+#MenuBar ul
+{
+    justify-content: center;
+    display: inline-flex;
+}
+
+.MenuBarCategory
+{
+    background-color: #1f1f1f;
+    border: 1px solid #5803;
+    padding: .75em 2.5em;
+    align-items: center;
+    border-radius: 8px;
+    margin: 0 .75em;
+}
+
+.MenuBarCategory p
+{
+    margin: 0 auto .5em auto;
+    width: max-content;
+    color: #f1f1f1;
+    font-size: 12px;
+}
+
+.MenuBarCategory nav
+{
+    display: inline-flex;
+}
+
+.MenuBarCategory a
+{
+    background: linear-gradient(to right,#cf01 0,#0ac1 100%);
+    background-color: #282828;
+    border: 1px solid #580;
+    box-sizing: content-box;
+    border-radius: 48px;
+    margin: 0px .5rem;
+    font-size: 0px;
+    padding: 10px;
+}
+
+.MenuBarCategory a:hover
+{
+    text-shadow: 2px 2px #141414;
+    background-color: #0ac2;
+    border: 1px solid #167;
+    transition: .1s;
+}
+
+/* -----  ----- Menu Buttons: -----  ----- */
+
+#MenuMobileButton
+{
+    background-image: url("/docs/img/misc/menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background: #141418;
+    margin: 0.75em auto;
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 1.5em;
+    z-index: 1;
+}
+
+.MenuButton:hover
+{
+    background-color: #272727;
+}
+
+.ThemeButton
+{
+    background-image: url("/docs/img/misc/light_mode.svg");
+    background-repeat: no-repeat;
+    background-color: #282830;
+    background-position: center;
+    background-size: contain;
+    
+    border: 0.25rem solid #282830;
+    box-shadow: 0 0 0 2px #cf0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 0.75rem;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    height: 18px;
+    width: 18px;
+}
+
+.ThemeButton:hover
+{
+    border: 0.25rem solid #141414;
+    background-color: #141414;
+}
+
+/* -----  ----- Mobile: -----  ----- */
+
+@media screen and (max-width: 700px) 
+{
+    .HiddenOnMobile
+    {
+        display: none;
+    }
+    
+    #MenuMobileButton /*HideOnDesktop*/
+    {
+        display: block;
+    }
+
+    .MenuState
+    {
+        max-height: 100px;
+    }
+    
+    #Logo
+    {
+        justify-content: center;
+    }
+
+    #Menu
+    {
+        overflow: hidden;
+        display: block;
+    }
+
+    #MenuItens ul, #MenuItens li
+    {
+        text-align: center;
+        display: inline;
+        margin: 1em;
+    }
+
+    #MenuItens .MenuItensButton
+    {
+        max-width: 500px;
+        display: block;
+        margin: auto;
+        width: 100%;
+    }
+
+    #MenuMobileButton
+    {
+        background-image: url("/docs/img/misc/menu.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        
+        position: absolute;
+        margin: 2em;
+        left: 0;
+        top: 0;
+    }
+}

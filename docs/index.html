@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Um Projeto de Redesign do site Vagalume feito por BR-Darkness com o proposito de aprimorar as habilidades de HTML, CSS e JavaScript">
+    <!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
+    <link rel="preconnect" href="https://api.vagalume.com.br">
+    <link rel="preconnect" href="https://www.vagalume.com.br">
+    <link rel="stylesheet" href="style/Global.css">
+    <script src="js/app.js"></script>
+    <title>Estudo Redesign Vagalume</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d2d2d">
+    <meta name="theme-color" content="#2d2d2d">
+</head>
+<body class="LightTheme">
+    <header id="Menu" class="MenuState">
+        <button id="MenuMobileButton" class="HiddenOnDesktop" aria-label="Botão Menu"  onclick="MenuMobile()"></button>
+        <div id="Logo">
+            <a href="#"><img src="img/vagalume-logo.svg" alt="Logo Vagalume" height="36px" width="100%"></a>
+        </div>
+        <nav id="MenuItens">
+            <ul>
+                <li><a class="MenuItensButton" href="https://www.vagalume.com.br/top100/" target="_blank"><img src="img/green/play_circle.svg" alt="Imagem de Top 100" width="18px" height="18px"> Top 100</a></li>
+                <li><a class="MenuItensButton" href="https://www.vagalume.com.br/browse/style/" target="_blank"><img src="img/green/speaker_group.svg" alt="Imagem de Estilos" width="18px" height="18px"> Estilos</a></li>
+                <li><a class="MenuItensButton" href="https://www.vagalume.com.br/browse/" target="_blank"><img src="img/green/sort_by_alpha.svg" alt="Imagem de A-Z" width="18px" height="18px"> A-Z</a></li>
+                <li><a class="MenuItensButton" href="https://www.vagalume.com.br/news/" target="_blank"><img src="img/green/newspaper.svg" alt="Imagem de Noticias" width="18px" height="18px"> Notícias</a></li>
+                <li><a class="MenuItensButton" href="https://www.vagalume.com.br/browse/hotspots/" target="_blank"><img src="img/green/local_fire_department.svg" alt="Imagem de Hot Spots" width="18px" height="18px"> Hot Spots</a></li>
+                <li><a class="MenuItensButton" href="https://vagalume.fm/" target="_blank"><img src="img/green/radio.svg" alt="Imagem de Vagalume.fm" width="18px" height="18px"> Vagalume.FM</a></li>
+                <li onclick="OpenModal('LoginModal')"><button class="MenuItensButton" aria-label="Botão de Login"><img src="img/green/person.svg" alt="Botão de Login" width="18px" height="18px"> Login</button></li>
+                <li onclick="Theme()"><button class="ThemeButton" aria-label="Botão de Tema do Site"></button></li>
+            </ul>
+        </nav>
+    </header>
+    <nav id="MenuBar">
+        <ul>
+            <li class="MenuBarCategory HiddenOnMobile">
+                <p><b>Nossas Extensões para navegadores:</b></p>
+                <nav>
+                    <a href="https://chrome.google.com/webstore/detail/vagalume/ipgcdnbeeiajinajlafjcdfhckglcopd" target="_blank"><img src="img/social/microsoftedge.svg" alt="Extensão Microsoft Edge" height="18px" width="18px"></a>
+                    <a href="https://chrome.google.com/webstore/detail/vagalume/ipgcdnbeeiajinajlafjcdfhckglcopd" target="_blank"><img src="img/social/googlechrome.svg" alt="Extensão Google Chrome" height="18px" width="18px"></a>
+                </nav>
+            </li>
+
+            <li class="MenuBarCategory">
+                <p><b>Baixe o VagalumeFM no seu celular:</b></p>
+                <nav>
+                    <a href="https://play.google.com/store/apps/details?id=br.com.vagalume.fm" target="_blank"><img src="img/social/android.svg" alt="App Android" height="18px" width="18px"></a>
+                    <a href="https://apps.apple.com/us/app/vagalume-fm/id1154246231" target="_blank"><img src="img/social/ios.svg" alt="App IOS" height="18px" width="18px"></a>
+                </nav>
+            </li>
+
+            <li class="MenuBarCategory">
+                <p><b>Siga o Vagalume nas redes sociais:</b></p>
+                <nav>
+                    <a href="https://www.facebook.com/sitevagalume" target="_blank"><img src="img/social/facebook.svg" alt="Facebook Vagalume" height="18px" width="18px"></a>
+                    <a href="https://www.instagram.com/sitevagalume/"target="_blank"><img src="img/social/instagram.svg" alt="Instagram Vagalume" height="18px" width="18px"></a>
+                    <a href="https://twitter.com/sitevagalume" target="_blank"><img src="img/social/twitter.svg" alt="Twitter Vagalume" height="18px" width="18px"></a>
+                    <a href="https://www.tiktok.com/@sitevagalume" target="_blank"><img src="img/social/tiktok.svg" alt="Tiktok Vagalume" height="18px" width="18px"></a>
+                    <a href="https://www.youtube.com/user/sitevagalume" target="_blank"><img src="img/social/youtube.svg" alt="YouTube Vagalume" height="18px" width="18px"></a>
+                    <a href="https://blog.vagalume.com.br/" target="_blank"><img src="img/social/medium.svg" alt="Medium Vagalume" height="18px" width="18px"></a>
+                    <a href="https://www.linkedin.com/company/vaga-lume-midia/?originalSubdomain=pt" target="_blank"><img src="img/social/linkedin.svg" alt="Linkedin Vagalume" height="18px" width="18px"></a>
+                </nav>
+            </li>
+
+            <li class="MenuBarCategory">
+                <p><b>Vagalume Playlisteiros:</b></p>
+                <nav>
+                    <a href="https://www.vagalume.com.br/playlisteiros/" target="_blank"><img src="img/misc/queue_music.svg" alt="Central de Ajuda" height="18px" width="18px"></a>
+                </nav>
+            </li>
+
+            <li class="MenuBarCategory">
+                <p><b>Enviar Conteúdo:</b></p>
+                <nav>
+                    <a href="https://www.vagalume.com.br/add/" target="_blank"><img src="img/misc/upload_file.svg" alt="Enviar Conteúdo" height="18px" width="18px"></a>
+                </nav>
+            </li>
+
+            <li class="MenuBarCategory">
+                <p><b>Central de Ajuda:</b></p>
+                <nav>
+                    <a href="https://vagalume.zendesk.com/hc/pt-br" target="_blank"><img src="img/misc/help.svg" alt="Central de Ajuda" height="18px" width="18px"></a>
+                </nav>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="SearchBarContainer">
+        <img crossorigin id="BannerImage" src="#" alt="Imagem de Banner do Site">
+        <h1 style="text-align: center;">Seja muito bem-vindo(a):</h1>
+        <p>O que gostaria de escutar hoje?</p>
+        <button type="button" onclick="OpenModal('SearchModal')">Ex: Artista - Música</button>
+        <p style="right: 0; bottom: 0; position: absolute;"><small id="BannerImageName"></small></p>
+    </div>
+
+    <nav id="HotSpotsContainer">
+        <div id="ContainerHeader">
+            <p><img src="img/green/local_fire_department.svg" alt="Imagem de Hot Spots" width="20px" height="20px"><b> Hot Spots:</b></p>
+            <p><a href="https://www.vagalume.com.br/browse/hotspots/" target="_blank"><b> Ver Todas <img src="img/misc/navigate_next.svg" alt="" width="20px" height="20px"></b></a></p>
+        </div>
+        <ul id="HotSpotsList" class="HotSpotsDiff">
+        <script async src="js/news.js"></script>
+            <!-- Content -->
+        </ul>
+        <br> <!-- Mobile -->
+    </nav>
+    
+    <div class="AdDiv"><p>Publicidade:</p></div>
+
+    <div id="NewsContainer">
+        <div id="ContainerHeader">
+            <p><img src="img/green/newspaper.svg" alt="Imagem de Noticias" width="20px" height="20px"><b> Últimas Noticias:</b></p>
+            <p><a href="https://www.vagalume.com.br/news/" target="_blank"><b> Ver Todas <img src="img/misc/navigate_next.svg" alt="" width="20px" height="20px"></b></a></p>
+        </div>
+        <ul id="LatestNewsList" class="GridList">
+            <!-- Content -->
+        </ul>
+    </div>
+    
+    <div class="AdDiv"><p>Publicidade:</p></div>
+
+    <!-- Músicas -->
+    <div>
+        <div id="ContainerHeader">
+            <p><img src="img/green/play_circle.svg" alt="Imagem de Top 100 Músicas" width="20px" height="20px"><b> Top 100 Músicas</b></p>
+            <p class="HiddenOnMobile"><small>As músicas mais acessadas no Vagalume</small></p>
+            <p><a href="https://www.vagalume.com.br/top100/musicas/" target="_blank"><b> Ver Top 100 <img src="img/misc/navigate_next.svg" alt="" width="20px" height="20px"></b></a></p>
+        </div>
+        <ul id="SongsRankList" class="GridList">
+            <!-- Content -->
+        </ul>
+        <p class="RankButton"><a href="https://www.vagalume.com.br/top100/musicas/" target="_blank">Top 100 Músicas</a></p>
+    </div>
+
+    <div class="AdDiv"><p>Publicidade:</p></div>
+
+    <!-- Álbuns -->
+    <div>
+        <div id="ContainerHeader">
+            <p><img src="img/green/library_music.svg" alt="Imagem de Top 100 Álbuns" width="20px" height="20px"><b> Top 100 Álbuns</b></p>
+            <p class="HiddenOnMobile"><small>Álbuns mais acessados no Vagalume</small></p>
+            <p><a href="https://www.vagalume.com.br/top100/albuns/" target="_blank"><b> Ver Top 100 <img src="img/misc/navigate_next.svg" alt="" width="20px" height="20px"></b></a></p>
+        </div>
+        <ul id="AlbunsRankList" class="GridList">
+            <!-- Content -->
+        </ul>
+        <p class="RankButton"><a href="https://www.vagalume.com.br/top100/albuns/" target="_blank">Top 100 Álbuns</a></p>
+    </div>
+
+    <div class="AdDiv"><p>Publicidade:</p></div>
+
+    <br><hr><br>
+    
+    <section>
+        <div>
+            <h2>Sobre o Projeto:</h2>
+            <p>Este projeto possui como objetivo (além de servir de portfólio para uma oportunidade na área de desenvolvimento), servir como um projeto de estudos sobre Design e como se consumir uma API na prática além é claro de tentar entregar um projeto em estado “Finalizado” (ou quase isso).</p>
+            <p>Tendo isto em vista tentei adicionar os principais endpoints da API afim de testar algumas possibilidades ao mesmo tempo em que tentei entregar um Design próprio para testar as minhas habilidades em um projeto.</p>
+            <img style="display: block; margin: auto;" src="img/vagalume-icon.png" alt="API Vagalume" width="200px" height="200px">
+            <p style="text-align: center;"><b>Este projeto foi feito utilizando a API do <a href="#">Vagalume.com.br</a>.</b></p>
+        </div>
+    </section>
+
+    <br><hr><br>
+
+    <div class="AdDiv"><p>Publicidade:</p></div>
+
+    <!-- Artistas -->
+    <div>
+        <div id="ContainerHeader">
+            <p><img src="img/green/star.svg" alt="Imagem de Top 100 Artistas" width="20px" height="20px"><b> Top 100 Artistas</b></p>
+            <p class="HiddenOnMobile"><small>Artistas mais acessados no Vagalume</small></p>
+            <p><a href="https://www.vagalume.com.br/top100/artistas/" target="_blank"><b> Ver Top 100 <img src="img/misc/navigate_next.svg" alt="" width="20px" height="20px"></b></a></p>
+        </div>
+        <ul id="ArtistsRankList" class="GridList">
+            <!-- Content -->
+        </ul>
+        <p class="RankButton"><a href="https://www.vagalume.com.br/top100/artistas/" target="_blank">Top 100 Artistas</a></p>
+    </div>
+
+    <div class="AdDiv"><p>Publicidade:</p></div>
+    
+    <footer>
+        <img tabindex="0" src="img/misc/arrow_upward.svg" alt="Imagem de Voltar para início" width="18px" height="18px" onclick="ScrollInicio()" id="TopButton">
+        <div id="FooterLinks">
+            <div class="FooterLinksCategory">
+                <p><b>• Veja também:</b></p>
+                <ul>
+                    <li><a href="https://www.vagalume.com.br/playlisteiros/" target="_blank"><img src="img/white/play_circle.svg" alt="Imagem de Vagalume Playlisteiros" width="18px" height="18px"> Playlisteiros</li></a>
+                    <li><a href="https://www.vagalume.com.br/news/tags/especiais/" target="_blank"><img src="img/white/star.svg" alt="Imagem de Especiais" width="18px" height="18px"> Especiais</li></a>
+                    <li><a href="https://www.vagalume.com.br/browse/hotspots/" target="_blank"><img src="img/white/local_fire_department.svg" alt="Imagem de Hot Spots" width="18px" height="18px"> Hot Spots</li></a>
+                    <li><a href="https://www.vagalume.com.br/top100/artistas/nacional/" target="_blank"><img src="img/white/speaker_group.svg" alt="Imagem de Top 100 Nacional" width="18px" height="18px"> Top 100 Nacional</li></a>
+                    <li><a href="https://www.vagalume.com.br/top100/artistas/internacional/" target="_blank"><img src="img/white/language.svg" alt="Imagem de Top 100 Internacional" width="18px" height="18px"> Top 100 Internacional</li></a>
+                    <li><a href="https://vagalume.fm/" target="_blank"><img src="img/white/radio.svg" alt="Imagem de Vagalume.FM" width="18px" height="18px"> Vagalume.FM</li></a>
+                </ul>
+            </div>
+
+            <div class="FooterLinksCategory">
+                <p><b>• Apps Vagalume:</b></p>
+                <ul>
+                    <li><a href="https://play.google.com/store/apps/details?id=br.com.vagalume.fm" target="_blank"><img src="img/social/android.svg" alt="App Android" height="18px" width="18px"> Aplicativo para Android</a></li>
+                    <li><a href="https://apps.apple.com/us/app/vagalume-fm/id1154246231" target="_blank"><img src="img/social/ios.svg" alt="App IOS" height="18px" width="18px"> Aplicativo para IOS</a></li>
+                </ul>
+            </div>
+
+            <div class="FooterLinksCategory">
+                <p><b>• Vagalume:</b></p>
+                <ul>
+                    <li><a href="https://vagalume.zendesk.com/hc/pt-br" target="_blank"><img src="img/white/help.svg" alt="Imagem de Central de Ajuda" width="18px" height="18px"> Central de Ajuda</a></li>
+                    <li><a href="https://www.vagalume.com.br/terms/" target="_blank"><img src="img/white/gavel.svg" alt="Imagem de Termos de Uso" width="18px" height="18px"> Termos de Uso</a></li>
+                    <li><a href="https://www.vagalume.com.br/terms/" target="_blank"><img src="img/white/privacy_tip.svg" alt="Imagem de Política de Privacidade" width="18px" height="18px"> Política de Privacidade</a></li>
+                </ul>
+            </div>
+
+            <div class="FooterLinksCategory HiddenOnMobile">
+                <p><b>• Extensões Vagalume:</b></p>
+                <ul>
+                    <li><a href="https://chrome.google.com/webstore/detail/vagalume/ipgcdnbeeiajinajlafjcdfhckglcopd" target="_blank"><img src="img/social/microsoftedge.svg" alt="Extensão Microsoft Edge" height="18px" width="18px"> Extensão para Edge</a></li>
+                    <li><a href="https://chrome.google.com/webstore/detail/vagalume/ipgcdnbeeiajinajlafjcdfhckglcopd" target="_blank"><img src="img/social/googlechrome.svg" alt="Extensão Google Chrome" height="18px" width="18px"> Extensão para Chrome</a></li>
+                </ul>
+            </div>
+
+            <div class="FooterLinksCategory">
+                <p><b>• Participe:</b></p>
+                <ul>
+                    <li><a href="https://meu.vagalume.com.br/" target="_blank"><img src="img/white/account_circle.svg" alt="Imagem de Crie seu perfil" width="18px" height="18px"> Crie seu perfil</a></li>
+                    <li><a href="https://www.vagalume.com.br/add/" target="_blank"><img src="img/white/music_note.svg" alt="Imagem de Cadastrar letras ou artistas" width="18px" height="18px"> Cadastrar letras ou artistas</a></li>
+                    <li><a href="https://www.vagalume.com.br/legenda/" target="_blank"><img src="img/white/subtitles.svg" alt="Imagem de Criar legendas em clipes" width="18px" height="18px"> Criar legendas em clipes</a></li>
+                </ul>
+            </div>
+
+            <div class="FooterLinksCategory">
+                <p><b>• Parceiros Vagalume:</b></p>
+                <ul>
+                    <li><a href="https://entretenimento.r7.com/" target="_blank"><img src="img/social/r7.svg" alt="R7 Música" height="18px" width="18px"> R7 Música</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="FooterSocial">
+            <p><b>Siga o Vagalume nas redes sociais:</b></p>
+            <ul>
+                <li><a href="https://www.facebook.com/sitevagalume" target="_blank"><img src="img/social/facebook.svg" alt="Facebook Vagalume" height="18px" width="18px"> Facebook</a></li>
+                <li><a href="https://www.instagram.com/sitevagalume/"target="_blank"><img src="img/social/instagram.svg" alt="Instagram Vagalume" height="18px" width="18px"> Instagram</a></li>
+                <li><a href="https://twitter.com/sitevagalume" target="_blank"><img src="img/social/twitter.svg" alt="Twitter Vagalume" height="18px" width="18px"> Twitter</a></li>
+                <li><a href="https://www.tiktok.com/@sitevagalume" target="_blank"><img src="img/social/tiktok.svg" alt="Tiktok Vagalume" height="18px" width="18px"> Tiktok</a></li>
+                <li><a href="https://www.youtube.com/user/sitevagalume" target="_blank"><img src="img/social/youtube.svg" alt="YouTube Vagalume" height="18px" width="18px"> YouTube</a></li>
+                <li><a href="https://blog.vagalume.com.br/" target="_blank"><img src="img/social/medium.svg" alt="Medium Vagalume" height="18px" width="18px"> Medium</a></li>
+                <li><a href="https://www.linkedin.com/company/vaga-lume-midia/?originalSubdomain=pt" target="_blank"><img src="img/social/linkedin.svg" alt="Linkedin Vagalume" height="18px" width="18px"> Linkedin</a></li>
+            </ul>
+        </div>
+    </footer>
+    <div id="FooterButton">
+        <div>
+            <img src="img/vagalume-footer.webp" alt="Rodapé da Página" height="75px" width="162px">
+            <p><a href="https://www.vagalume.com.br/" target="_blank"><b>Vagalume.</b></a> Música é tudo.</p>
+        </div>
+        <p><a href="https://github.com/BR-Darkness" target="_blank"><b>BR-Darkness</b></a> (Apenas um projeto de estudo).</p>
+    </div>
+    <!-- JS -->
+    <script async src="js/search.js"></script>
+    <!-- Modals -->
+    <div id="PresentationModal" class="ModalContainer">
+        <div class="ModalBox"> 
+            <div class="ModalButton">
+                <button aria-label="Botão Fechar" tabindex="0" class="CloseModalButton" onclick="CloseModal('PresentationModal')"></button>
+            </div>
+            <div class="ModalBoxHeader">
+                <h2>Sobre o Projeto:</h2>
+            </div>
+            <p>Este projeto possui como objetivo (além de servir de portfólio para uma oportunidade na área de desenvolvimento), servir como um projeto de estudos sobre Design e como se consumir uma API na prática além é claro de tentar entregar um projeto em estado “Finalizado” (ou quase isso).</p>
+            <p>Tendo isto em vista tentei adicionar os principais endpoints da API afim de testar algumas possibilidades ao mesmo tempo em que tentei entregar um Design próprio para testar as minhas habilidades em um projeto.</p>
+            <img style="display: block; margin: auto;" src="img/vagalume-icon.png" alt="API Vagalume" width="100px" height="100px">
+            <p style="text-align: center;"><b>Este projeto foi feito utilizando a API do <a href="#">Vagalume.com.br</a>.</b></p>
+        </div>
+    </div>
+    <div id="SearchModal" class="ModalContainer CloseModal">
+        <div class="ModalBox">
+            <div class="ModalButton">
+                <button aria-label="Botão Fechar" tabindex="0" class="CloseModalButton" onclick="CloseModal('SearchModal')"></button>
+            </div>
+            <div class="ModalBoxHeader">
+                <h2>Pesquisa:</h2>
+            </div>
+            <br>
+            <!-- <form action="" method="get"> --> 
+                <input oninput="Search()" type="search" name="FormSearch" id="FormSearch" maxlength="135" placeholder="O que você quer ouvir hoje?" autocomplete="off" autofocus="true" tabindex="0">
+            <!-- </form> -->
+        </div>
+
+        <div class="ModalSearch">
+            <h3>Artistas:</h3>
+            <nav>
+                <ul id="SearchArtList">
+                    <!-- Content -->
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Endpoint da API não esta funcinando. -->
+        <!-- <div class="ModalSearch">
+            <h3>Álbuns:</h3>
+            <nav>
+                <ul id="SearchAlbList">
+
+                </ul>
+            </nav>
+        </div> -->
+
+        <div class="ModalSearch">
+            <h3>Músicas:</h3>
+            <nav>
+                <ul id="SearchMusList">
+                    <!-- Content -->
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="LoginModal" class="ModalContainer CloseModal">
+        <div class="ModalBox">
+            <div class="ModalButton">
+                <button aria-label="Botão Fechar" tabindex="0" class="CloseModalButton" onclick="CloseModal('LoginModal')"></button>
+            </div>
+            <div class="ModalBoxHeader">
+                <h2>Login Vagalume:</h2>
+            </div>
+
+            <!-- <form action="" method="get"> -->
+                <figure>
+                    <img id="ModalImage" src="img/green/person.svg" alt="Imagem da tela de Login" width="64px" height="64px">
+                    <figcaption>Seja muito bem-vindo.</figcaption>
+                </figure><br>
+                <label for="FormLogin">Login:</label>
+                <input type="text" name="FormLogin" id="FormLogin" placeholder="Login / E-mail"><br><br>
+                <label for="FormSenha">Senha:</label>
+                <input type="password" name="FormSenha" id="FormSenha" placeholder="Senha de Acesso">
+                <p><a href="#">Esqueci minha senha</a></p>
+                <nav>
+                    <input style="background-color: #0ac;" type="button" value="Criar Conta">
+                    <input style="background-color: #cf0;" type="button" value="Entrar">
+                </nav>
+            <!-- </form> -->
+        </div>
+    </div>
+    <script defer src="js/rank.js"></script>
+</body>
+</html>

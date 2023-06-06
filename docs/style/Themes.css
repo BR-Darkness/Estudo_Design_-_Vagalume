@@ -1,0 +1,66 @@
+:Root .LightTheme
+{
+    /* Styles */
+    --Gradient: linear-gradient(to right,#323832 0, #283848 100%);
+
+    /* Colors */
+    --Background-Color:     #f1f1ff;
+    --Menu-Color:           #141418;
+    --MenuBar-Color:        var(--Gradient);
+    --Card-Color:           #1e2021;
+    --Footer-Color:         #282830;
+    --Modal-Color:          #2d2d2d;
+
+}
+
+.LightTheme
+{
+    color: #1f1f1f;
+}
+
+.LightTheme hr
+{
+    border: 4px solid #0ac;
+}
+
+.LightTheme section a, .LightTheme .ModalContent a
+{
+    color: #250;
+}
+
+.LightTheme section a:hover, .LightTheme .ModalContent a:hover
+{
+    color: #167;
+}
+
+.LightTheme #SearchBarContainer button
+{
+    background-color: #1f1f1f;
+}
+
+.LightTheme #HotSpotsContainer
+{
+    background-color: #1f1f1f;
+}
+
+.LightTheme .MenuBarCategory
+{
+    background-color: #14141480;
+}
+
+/* TESTES */
+
+.LightTheme #SearchBarContainer img
+{
+    filter: brightness(.4) blur(.4rem);
+}
+
+.LightTheme .ThemeButton
+{
+    background-image: url("/docs/img/misc/dark_mode.svg");
+}
+
+.LightTheme .ModalBox
+{
+    background-color: #2d2d2d;
+}

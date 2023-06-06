@@ -1,0 +1,191 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"); */
+
+@import url(Themes.css);
+@import url(Modal.css);
+@import url(Menu.css);
+@import url(Search.css);
+@import url(Cards.css);
+@import url(Footer.css);
+@import url(Testes.css);
+
+/* Testes: */
+
+:root
+{
+    /* Styles */
+    --Gradient: linear-gradient(to right,#31371c 0, #152b37 100%);
+    
+    /* Colors */
+    --Background-Color:     #1c1c23;
+    --Menu-Color:           #141418;
+    --MenuBar-Color:        #282830;
+    --Card-Color:           #1e2021;
+    --Footer-Color:         #141414;
+    --Modal-Color:          #2d2d2d;
+}
+
+*:focus-visible
+{
+    outline: 2px solid crimson;
+    border-radius: 8px;
+}
+
+::selection 
+{
+    background: #5808;
+}
+
+.HiddenOnDesktop
+{
+    display: none;
+}
+
+*
+{
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body
+{
+    background-color: var(--Background-Color);
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #f1f1ff;
+
+    /* [Prefiro não comentar...] */
+    max-width: 2000px;
+    margin: auto;
+}
+
+br, hr, img, span
+{
+    /* Para o usuario não selecionar*/
+    -webkit-user-select:none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+
+hr
+{
+    border: 4px solid #cf0;
+    border-radius: 16px;
+    margin: 35px auto;
+    width: 50%;
+}
+
+section
+{
+    margin: 0.75em;
+}
+
+section p
+{
+    margin: 2em;
+}
+
+section h2
+{
+    text-align: center;
+}
+
+section div
+{   
+    border-radius: 48px;
+    text-align: justify;
+    max-width: 750px;
+    line-height: 2;
+    margin: auto;
+}
+
+/*  -----  ----- Links -----  -----  */
+
+a
+{
+    color: #cf0;
+}
+
+a:hover
+{
+    color: #0ac;
+}
+
+/* -----  ----- ScrollBar -----  ----- */
+
+::-webkit-scrollbar 
+{
+    height: 0.75em;
+    width: 0.75em;
+}
+
+::-webkit-scrollbar-track 
+{
+    border: 1px solid #5803;
+    background: #282830;
+}
+   
+::-webkit-scrollbar-thumb 
+{
+    box-sizing: border-box;
+    border-radius: 8px;
+    background: #555; 
+}
+
+::-webkit-scrollbar-thumb:hover 
+{
+    background: #580; 
+}
+
+/*  -----  ----- Botão voltar para o topo  -----  -----  */
+
+#TopButton
+{
+    background: linear-gradient(to right,#31371c 0, #152b37 100%);
+    box-shadow: #14141460 1px 1px 4px;
+    border: 2px solid #167;
+    border-radius: 50%;
+    background: #cf0;
+    cursor: pointer;
+    color: #1f1f1f;
+
+    min-height: 48px;
+    min-width: 48px;
+    padding: .75rem;
+    margin: 1em;
+    
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+}
+
+#TopButton:hover
+{
+    transition: .25s;
+    background: #0ac;
+    color: #f1f1f1;
+}
+
+/* -----  ----- ADs: -----  ----- */
+
+.AdDiv
+{
+    background-color: #2d2d2d;
+    border: 1px solid #0ac;
+    margin: 100px auto;
+    border-radius: 8px;
+    min-height: 200px;
+    max-width: 75%;
+}
+
+.AdDiv p
+{
+    margin: -2.25em auto auto auto;
+    text-align: center;
+    font-weight: bold;
+}
