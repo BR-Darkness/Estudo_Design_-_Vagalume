@@ -64,7 +64,7 @@
 
 .CloseModalButton
 {
-    background-image: url("/docs/img/misc/cancel.svg");
+    background-image: url("../img/misc/cancel.svg");
 }
 
 /* -----  ----- Modal Inputs: -----  ----- */
