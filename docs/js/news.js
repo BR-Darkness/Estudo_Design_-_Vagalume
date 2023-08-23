@@ -22,7 +22,7 @@ function Hot_Spots()
             data +=
             `
             <li class="Card">
-                <a href="https://www.vagalume.com.br${HotSpot.link}" target="_blank">
+                <a href="https://www.vagalume.com.br${HotSpot.link.replace("https://www.vagalume.com.br", "")}" target="_blank">
                     <picture>
                         <p><b>${HotSpot.date_fmt}</b></p>
                         <source media="(max-width:800px)" srcset="${HotSpot.art_pic_src}" width="133px" height="156px"></source>
@@ -32,7 +32,7 @@ function Hot_Spots()
                     </picture>
                 </a>
 
-                <p class="CardShare"><img src="img/misc/share.svg" alt="Imagem de Top 100" width="18px" height="18px"><b style="color: #f1f1f1"> Compartilhar</b></p>
+                <!-- <p class="CardShare"><img src="img/misc/share.svg" alt="Imagem de Top 100" width="18px" height="18px"><b style="color: #f1f1f1"> Compartilhar</b></p> -->
             </li>
             `
         });
