@@ -1,5 +1,5 @@
 // Endereços da API:
-const API_Vagalume_Hot_Spots    = "https://api.vagalume.com.br/hotspots.php";
+const API_Vagalume_Hot_Spots    = "https://api.vagalume.com.br/hotspots.php?apikey=" + Math.random();
 const API_Vagalume_Noticias     = "https://www.vagalume.com.br/news/index.js";
 
 BannerImage(7500);

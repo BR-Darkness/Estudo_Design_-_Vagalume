@@ -1,11 +1,11 @@
 // Endereços da API:
-const API_Vagalume_Rank = "https://api.vagalume.com.br/rank.php";
+const API_Vagalume_Rank = "https://api.vagalume.com.br/rank.php?apikey=" + Math.random();
 
 window.onload = MusRanking(), AlbRanking(), ArtRanking();
 
 function ArtRanking()
 {
-    fetch(API_Vagalume_Rank + "?type=art&limit=16")
+    fetch(API_Vagalume_Rank + "&type=art&limit=16")
 
     .then((response) => response.json())
     .then((json) => 
@@ -32,7 +32,7 @@ function ArtRanking()
 
 function AlbRanking()
 {
-    fetch(API_Vagalume_Rank + "?type=alb&limit=16")
+    fetch(API_Vagalume_Rank + "&type=alb&limit=16")
     
     .then((response) => response.json())
     .then((json) => 
@@ -63,7 +63,7 @@ function AlbRanking()
 
 function MusRanking()
 {
-    fetch(API_Vagalume_Rank + "?type=mus&period=day&limit=16")
+    fetch(API_Vagalume_Rank + "&type=mus&period=day&limit=16")
         
     .then((response) => response.json())
     .then((json) => 
